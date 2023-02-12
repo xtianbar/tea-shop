@@ -2,7 +2,14 @@
 
 :root {
   --bg-color: rgba(228, 228, 228, 0.212);
+  --bg-color-2: rgba(73, 252, 127, 0.212);
+  --bg-color-3: rgba(255, 217, 0, 0.253);
+  --bg-color-4: rgba(255, 217, 0, 0.388);
+  --header-color: gold;
+  --black: #010101;
+  --white: #fff;
 }
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +17,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@media (max-width: 500px) {
+  .tea-logo {
+    display: inline;
+  }
+}
 .container {
   background-image: url('../img/pexels-thought-catalog-904616.jpg');
   background-size: cover;
@@ -17,17 +29,44 @@
   text-align: center;
 }
 
-header {
-  margin: 5% 0 5% 0;
-}
-header > h1 {
+.tea-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 0 5% 0;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
+  color: var(--header-color);
+  text-shadow: 8px 1px 10px var(--black);
+  font-stretch: condensed;
+  letter-spacing: 0.15rem;
 }
-header > p {
+
+.tea-logo > img{
+  width: 50px;
+  height: 50px;
+  margin: 0 1.5%;
+  
+}
+
+footer > p {
   text-transform: lowercase;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
+  margin: 1% 0 1% 0;
+}
+
+.wordpress {
+  color: var(--black);
+  text-decoration: none;
+}
+.wordpress:visited{
+  color: var(--black);
+}
+.wordpress:hover{
+  color:var(--black);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 .line {
@@ -36,6 +75,43 @@ header > p {
   box-shadow: -90px 66px 0px -5px rgba(0,0,0,0.75);
     -webkit-box-shadow: -90px 66px 0px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: -90px 66px 0px -5px rgba(0,0,0,0.75);
-margin-top: 25px;
+  margin: 2% 0 3% 0;
 }
+
+.tea-menu {
+  width: 100%;
+  max-width: 80%;
+  background-color: var(--bg-color);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.tea-section-title {
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 2% 0 2% 0;
+  background-color: var(--bg-color-4);
+}
+
+.tea-items p {
+  display: inline-block;
+  font-weight: 400;
+  margin: 5px 0px;
+  padding: 0 1% 0 2%;
+}
+
+.tea-flavor, .collection-flavor {
+  width: 75%;
+  background-color: var(--bg-color-2);
+  text-align: left;
+}
+  
+.tea-price, .collection-price {
+  width: 25%;
+  background-color: var(--bg-color-3);
+  text-align: right;
+}
+ 
 
